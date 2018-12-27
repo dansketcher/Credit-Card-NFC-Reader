@@ -206,8 +206,9 @@ public class MainActivity extends AppCompatActivity implements CardNfcAsyncTask.
 
     private String getPrettyCardNumber(String card){
         String div = " - ";
+        int len = card.length();
         return  card.substring(0,4) + div + card.substring(4,8) + div + card.substring(8,12)
-                +div + card.substring(12,16);
+                +div + card.substring(12,len);
     }
 
     private void goToRepo(){
